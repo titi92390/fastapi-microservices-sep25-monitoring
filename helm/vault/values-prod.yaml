@@ -1,0 +1,29 @@
+server:
+  dev:
+    enabled: false
+
+  standalone:
+    enabled: true
+
+  dataStorage:
+    enabled: true
+    size: 10Gi
+    mountPath: /vault/data
+
+  auditStorage:
+    enabled: true
+    size: 5Gi
+
+ui:
+  enabled: true
+
+service:
+  type: ClusterIP
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
